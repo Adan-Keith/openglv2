@@ -1,5 +1,6 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
+//#include <GL/glut.h>
 
 #define SCREEN_WIDTH 640
 #define SCREEN_HEIGHT 480
@@ -36,9 +37,12 @@ int main(void)
     {
         100, 100, 0,//A
         100, 300, 0,//B
-        500, 300, 0,//C
-        550, 200, 0,//D
-        500, 100, 0 //E
+        40, 300, 0,//C
+        40, 320, 0,//D
+        500, 320, 0,//E
+        500, 300, 0,//F
+        440, 300, 0,//G
+        440, 100, 0,//H
     };
 
     glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); // polygon drawing mode (GL_POINT, GL_LINE, GL_FILL)
@@ -52,7 +56,7 @@ int main(void)
         // render OpenGL here
         glEnableClientState(GL_VERTEX_ARRAY);
         glVertexPointer(3, GL_FLOAT, 0, polygonVertices);
-        glDrawArrays(GL_POLYGON, 0, 5);
+        glDrawArrays(GL_POLYGON, 0, 8);
         glDisableClientState(GL_VERTEX_ARRAY);
 
         // Swap front and back buffers
